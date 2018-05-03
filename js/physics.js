@@ -43,7 +43,7 @@ Physics.prototype.simulate = function()
 		for ( var x = 0; x < world.sx; x++ ) {
 			for ( var y = 0; y < world.sy; y++ ) {
 				for ( var z = 0; z < world.sz; z++ ) {
-					if ( blocks[x][y][z].gravity && z > 0 && blocks[x][y][z-1] == BLOCK.AIR )
+					if ( blocks[x][y][z].gravity && z > -1 && blocks[x][y][z-1] == BLOCK.AIR )
 					{
 						world.setBlock( x, y, z - 1, blocks[x][y][z] );
 						world.setBlock( x, y, z, BLOCK.AIR );
